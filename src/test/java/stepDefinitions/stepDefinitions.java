@@ -30,12 +30,13 @@ public class stepDefinitions extends Utils {
     RequestSpecification primary;
     Response response;
     testJSONPayload td = new testJSONPayload();
-    @Given("Add a place payload")
-    public void add_a_place_payload() throws IOException {
 
-         primary = given().spec(requestSpecification()).body(td.testData());
 
+    @Given("Add a place payload With {string} {string} {string} {string}")
+    public void add_a_place_payload_with(String name, String Phone_number, String address, String language) throws IOException {
+         primary = given().spec(requestSpecification()).body(td.testData(name,Phone_number,address,language));
     }
+
     @When("user calls the {string} using Post http request")
     public void user_calls_the_using_post_http_request(String string) {
         res =  new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();

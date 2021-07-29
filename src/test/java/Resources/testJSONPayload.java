@@ -8,15 +8,15 @@ import java.util.List;
 
 public class testJSONPayload {
 
-    public GoogleApiproduct testData(){
+    public GoogleApiproduct testData(String name, String Phone_number, String address, String language){
 
         GoogleApiproduct gap = new GoogleApiproduct();
         gap.setAccuracy(50);
-        gap.setName("Frontline house");
-        gap.setPhone_number("(+91) 983 893 3937");
-        gap.setAddress("29, side layout, cohen 09");
+        gap.setName(name);
+        gap.setPhone_number(Phone_number);
+        gap.setAddress(address);
         gap.setWebsite("http://google.com");
-        gap.setLanguage("French-IN");
+        gap.setLanguage(language);
         List<String> typeList = new ArrayList<String>();
         typeList.add("shoe park");
         typeList.add("shop");
