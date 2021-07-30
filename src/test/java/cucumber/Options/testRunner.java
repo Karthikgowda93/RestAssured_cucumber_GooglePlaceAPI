@@ -1,4 +1,4 @@
-package cucumberOptions;
+package cucumber.Options;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "stepDefinitions"
+        //tags = "@DeletePlace"
 )
 public class testRunner {
 

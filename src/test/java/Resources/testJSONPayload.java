@@ -1,6 +1,7 @@
 package Resources;
 
 import pojo.GoogleApiproduct;
+import pojo.UpdateProductPayload;
 import pojo.location;
 
 import java.util.ArrayList;
@@ -28,5 +29,20 @@ public class testJSONPayload {
 
         return gap;
     }
+
+    public String deleteApiPayload(String place_Id){
+        return "{\r\n\r\n    \"place_id\": \""+place_Id+"\"\r\n\r\n}\r\n";
+    }
+
+    public UpdateProductPayload updatePlacePayload(String place_id, String address, String key){
+        UpdateProductPayload up = new UpdateProductPayload();
+        up.setPlace_id(place_id);
+        up.setAddress(address);
+        up.setKey(key);
+
+        return up;
+    }
+
+
 
 }
