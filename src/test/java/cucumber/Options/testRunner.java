@@ -7,8 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = "stepDefinitions"
-        //tags = "@DeletePlace"
+        plugin = "json:target/jsonReports/cucumber-report.json",
+        glue = "stepDefinitions",
+        monochrome = true, // to display console output in proper readable format
+        dryRun = false// to check the mapping is proper between feature file and step definition file if made it true
+       // tags = "@UpdatePlace"
 )
 public class testRunner {
 
